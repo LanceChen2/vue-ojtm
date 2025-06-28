@@ -26,6 +26,7 @@ const getName = () => {
         <!-- 屬性繫節 -->
         <input type="checkbox" v-model="isDisabled" /> 同意條款
         <button v-bind:disabled="!isDisabled">click</button>
+        <button :disabled="false">不啟用</button>
         <br>
         <img src="" v-bind:title="title"  />
         <a href="" v-bind:title="title">iSpan</a>
