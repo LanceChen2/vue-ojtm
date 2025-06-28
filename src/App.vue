@@ -1,8 +1,13 @@
 <script setup>
 import ApiStyle from './components/ApiStyle.vue';
+import BindingComponent from './components/BindingComponent.vue';
+import BindingDemo from './components/BindingDemo.vue';
+import CountComponent from './components/CountComponent.vue';
 import FirstComponent from './components/FirstComponent.vue';
+import HasBook from './components/HasBook.vue';
 import SecondComponent from './components/SecondComponent.vue';
 import ThirdComponent from './components/ThirdComponent.vue';
+import WeekDay from './components/WeekDay.vue';
 
 </script>
 
@@ -12,6 +17,12 @@ import ThirdComponent from './components/ThirdComponent.vue';
     <SecondComponent />
     <ThirdComponent />
     <ApiStyle />    
+    <CountComponent />
+    <BindingComponent/>
+    <WeekDay />
+    <HasBook />
+    <hr>
+    <BindingDemo /> 
 </template>
 
 <style scoped></style>
