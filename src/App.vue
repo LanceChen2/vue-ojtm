@@ -38,4 +38,8 @@ import HomeView from './views/HomeView.vue';
     <BindingDemo />  -->
 </template>
 
-<style scoped></style>
+<style scoped>
+#apph2 {
+    color: red;
+}
+</style>
