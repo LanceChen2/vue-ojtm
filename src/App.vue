@@ -11,12 +11,19 @@ import HasBook from './components/HasBook.vue';
 import SecondComponent from './components/SecondComponent.vue';
 import ThirdComponent from './components/ThirdComponent.vue';
 import WeekDay from './components/WeekDay.vue';
+import AboutView from './views/AboutView.vue';
+import ContactView from './views/ContactView.vue';
+import HomeView from './views/HomeView.vue';
 
 </script>
 
 <template>
-    <h2>Hello, Vue!!</h2>
-    <ClockComponent />
+    <h2 id="apph2">Hello, Vue!!</h2>
+    <HomeView />
+    <AboutView /> 
+    <ContactView />
+
+    <!-- <ClockComponent />
     <BmiCalculator />
     <EventBinding /> 
     <FirstComponent />
@@ -28,7 +35,7 @@ import WeekDay from './components/WeekDay.vue';
     <WeekDay />
     <HasBook />
     <hr>
-    <BindingDemo /> 
+    <BindingDemo />  -->
 </template>
 
 <style scoped></style>
