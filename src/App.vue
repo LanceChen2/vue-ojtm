@@ -20,6 +20,7 @@ import HomeView from './views/HomeView.vue';
 import HeaderComponent from './components/HeaderComponent.vue';
 import JumbotronComponent from './components/JumbotronComponent.vue';
 import FooterComponent from './components/FooterComponent.vue';
+import DirectiveComponent from './components/DirectiveComponent.vue';
 
 </script>
 
@@ -28,6 +29,8 @@ import FooterComponent from './components/FooterComponent.vue';
     <JumbotronComponent></JumbotronComponent>
     <div class="container mt-3">
     <RouterView></RouterView>
+    <hr>
+    <DirectiveComponent></DirectiveComponent>
     <!-- <h2 id="apph2">Hello, Vue!!</h2> -->
     <!-- <RouterLink to="/">首頁</RouterLink> |
     <RouterLink to="/about_ispan">關於我們</RouterLink> |

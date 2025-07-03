@@ -41,6 +41,7 @@ const changeHandler = event =>{
 const celsius = ref(0);
 const fahrenheit = computed(() => Number(celsius.value) * 9/5 + 32);
 
+
 </script>
 
 <template>
@@ -85,9 +86,8 @@ const fahrenheit = computed(() => Number(celsius.value) * 9/5 + 32);
                 <label><input type="checkbox" value="Javascript" v-model="skills"/>Javascript</label>
                 <label><input type="checkbox" value="Vue3" v-model="skills"/>Vue3</label>
                 <p>選擇的專長: {{ skills }}</p>
-
-
             <button type="submit">送出</button>
+
         </form>
     </div>
 </template>
