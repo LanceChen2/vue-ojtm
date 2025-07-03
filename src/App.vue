@@ -30,7 +30,7 @@ import DirectiveComponent from './components/DirectiveComponent.vue';
     <div class="container mt-3">
     <RouterView></RouterView>
     <hr>
-    <DirectiveComponent></DirectiveComponent>
+    <!-- <DirectiveComponent></DirectiveComponent> -->
     <!-- <h2 id="apph2">Hello, Vue!!</h2> -->
     <!-- <RouterLink to="/">首頁</RouterLink> |
     <RouterLink to="/about_ispan">關於我們</RouterLink> |
