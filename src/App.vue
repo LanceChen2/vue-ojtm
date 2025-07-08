@@ -23,6 +23,8 @@ import FooterComponent from './components/FooterComponent.vue';
 import DirectiveComponent from './components/DirectiveComponent.vue';
 import ChildComponent from './components/ChildComponent.vue';
 import { ref } from 'vue';
+import FancyButton from './components/FancyButton.vue';
+import CategoriesComponent from './components/CategoriesComponent.vue';
 
 const message = ref('這個訊息來自App.vue')
 const count = ref(50)
@@ -43,6 +45,17 @@ const likesEventHandler = data => {
     <div class="container mt-3">
     <RouterView></RouterView>
     <hr>
+    <CategoriesComponent></CategoriesComponent>
+
+    <!-- <FancyButton>
+        <i class="bi bi-airplane-fill"></i> 送出
+    </FancyButton>
+    <FancyButton>
+        <i class="bi bi-apple"></i> 登入
+    </FancyButton>
+    <FancyButton>
+        <i class="bi bi-arrow-down-left-circle-fill"></i> 加入購物車
+    </FancyButton> -->
     <!-- <DirectiveComponent></DirectiveComponent> -->
     <!-- :message="message" -->
      <!-- message, likes是自訂的屬性 -->

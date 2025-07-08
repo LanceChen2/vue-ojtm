@@ -1,7 +1,9 @@
 <script setup>
 import TodoAdd from '@/components/TodoAdd.vue';
 import TodoFooter from '@/components/TodoFooter.vue';
-import { computed, ref } from 'vue';
+import { computed, ref, watchEffect } from 'vue';
+import { useTodoStore } from '@/stores/todo';
+const storeTodo = useTodoStore();
 
 const todos = ref(
     [
@@ -10,6 +12,12 @@ const todos = ref(
         { "id": "m21w6x73hw2abcd", "title": "睡覺", "completed": true },
     ]
 )
+
+//把資料寫進 localStorage
+// localStorage.setItem('todos', JSON.stringify(todos.value));
+//從localStorage讀取待辦事項
+// const todos = ref(JSON.parse(localStorage.getItem('todos')))
+
 //取得唯一值
 const uniqueId = () => Date.now().toString(36) + Math.random().toString(36).substring(2, 9);
 
@@ -46,7 +54,18 @@ const remaining = computed(()=>{
    return activeTodos.length
 })
 
+//響應式資料改變了就把資料寫進 localStorage
+//computed => 只做計算不要有 side effect
+//watch
+// watch('todos', (newTodos, oldTodos){
 
+// }, {deep: true, immediate: true})
+//watchEffect
+watchEffect(()=>{
+    localStorage.setItem('todos', JSON.stringify(todos.value));
+    const activeTodos = todos.value.filter(todo => !todo.completed)
+    storeTodo.unfinishedQtyChange(activeTodos.length)
+})
 
 </script>
 
