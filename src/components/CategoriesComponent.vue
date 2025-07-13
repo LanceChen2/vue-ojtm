@@ -7,8 +7,8 @@ const baseUrl = import.meta.env.VITE_API_BASEURL;
 
 const apiUrl = `${baseUrl}/Categories`; 
 
-
 // console.log(apiUrl);
+
 
 // fetch(apiUrl)
 //     .then(response => response.json())
