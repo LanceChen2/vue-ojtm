@@ -1,4 +1,6 @@
 <script setup>
+import { Modal } from 'bootstrap';
+
 const props = defineProps({
     member: Object
 })
@@ -7,8 +9,11 @@ const emit = defineEmits(['updateMember'])
 const clickHandler = () =>{
     // console.log(props.member);
     emit('updateMember', props.member);
+    // 隱藏 Modal
+    const memberModal = document.querySelector('#editModal');
+    const theModal = Modal.getInstance(memberModal);
+    theModal.hide();
 }
-
 </script>
 
 <template>
